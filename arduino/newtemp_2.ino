@@ -65,7 +65,7 @@ void loop() {
 }
 
 void reconnect() {
-  // รอ 5 วินาทีหลังจากการขับถ่ายก่อน
+  // รอ 5 วินาทีหลังจากการเชื่อมต่อีกครั้งก่อน
   delay(5000);
   Serial.println("Reconnecting to MQTT Broker...");
   
