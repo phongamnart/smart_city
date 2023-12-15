@@ -4,9 +4,9 @@
 
 const char* ssid = "extend_60";
 const char* password = "1231231235";
-const char* mqtt_server = "172.16.60.206";
-const char* mqtt_topic_temperature = "sensor/temperature";
-const char* mqtt_topic_humidity = "sensor/humidity";
+const char* mqtt_server = "172.16.60.211";
+const char* mqtt_topic_temperature = "board1/sensor_data/temperature";
+const char* mqtt_topic_humidity = "board1/sensor_data/humidity";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -23,7 +23,6 @@ void setup() {
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
     Serial.println("Connecting to WiFi...");
   }
   Serial.println("Connected to WiFi");
@@ -61,12 +60,12 @@ void loop() {
   snprintf(humidityMsg, 10, "%.2f", humidity);
   client.publish(mqtt_topic_humidity, humidityMsg);
 
-  delay(2000);  // รอ 2 วินาที
+  delay(1500);  // รอ 1 วินาที
 }
 
 void reconnect() {
-  // รอ 5 วินาทีหลังจากการเชื่อมต่อีกครั้งก่อน
-  delay(5000);
+  // รอ 1 วินาที
+  delay(1000);
   Serial.println("Reconnecting to MQTT Broker...");
   
   // ลองเชื่อมต่อใหม่
