@@ -5,8 +5,8 @@
 const char* ssid = "extend_60";
 const char* password = "1231231235";
 const char* mqtt_server = "172.16.60.211";
-const char* mqtt_topic_temperature = "board1/sensor_data/temperature";
-const char* mqtt_topic_humidity = "board1/sensor_data/humidity";
+const char* mqtt_topic_temperature = "board1/temperature";
+const char* mqtt_topic_humidity = "board1/humidity";
 
 WiFiClient espClient;
 PubSubClient client(espClient);

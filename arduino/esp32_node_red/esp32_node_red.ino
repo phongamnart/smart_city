@@ -7,7 +7,7 @@
 
 const char* ssid = "extend_60";        // ชื่อของ WiFi
 const char* password = "1231231235";    // รหัสของ WiFi
-const char* mqtt_server = "172.16.60.206"; // IP address ของ Raspberry Pi
+const char* mqtt_server = "172.16.60.211"; // IP address ของ Raspberry Pi
 
 WiFiClient espClient;
 PubSubClient client(espClient);
