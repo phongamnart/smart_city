@@ -14,10 +14,10 @@ import (
 
 var (
 	mu                      sync.Mutex
-	temperatureValuesBoard1 []float64
-	humidityValuesBoard1    []float64
-	temperatureValuesBoard2 []float64
-	humidityValuesBoard2    []float64
+	temperatureValues []float64
+	humidityValues    []float64
+	//temperatureValuesBoard2 []float64
+	//humidityValuesBoard2    []float64
 )
 
 // Config holds the configuration values
